@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+  each person in persons
+    li 
+      a(href='/deleteperson/#{person.name}', class='person')= person.name
+  
